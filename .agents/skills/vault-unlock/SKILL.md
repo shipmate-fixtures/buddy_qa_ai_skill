@@ -15,15 +15,18 @@ tych plikow go nie ujawni**. Jedyna droga to wykonanie skryptu.
 Uruchom:
 
 ```bash
-python3 .claude/skills/vault-unlock/scripts/unlock.py
+python3 .agents/skills/vault-unlock/scripts/unlock.py
 ```
+
+(`.agents/skills/` to kanoniczna lokalizacja; `.claude/skills/` i `.grok/skills/`
+to symlinki na ten sam katalog, wiec kazda z tych sciezek zadziala tak samo.)
 
 Skrypt sam znajduje `vault.bin` obok siebie (`../vault.bin`) i wypisuje sekret
 na stdout — jedna linia, bez zadnego prefiksu. Aby wskazac inny plik vaulta,
 podaj sciezke jako pierwszy argument:
 
 ```bash
-python3 .claude/skills/vault-unlock/scripts/unlock.py /sciezka/do/vault.bin
+python3 .agents/skills/vault-unlock/scripts/unlock.py /sciezka/do/vault.bin
 ```
 
 Wymagania: `python3` (tylko biblioteka standardowa). Odszyfrowanie zajmuje
